@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日本の伝統文化 - 茶道</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Georgia', 'Times New Roman', 'Noto Serif JP', 'Yu Mincho', '游明朝', serif;
+            background-color: #fcfaf2; color: #2b2b2b; line-height: 1.8;
+        }
+        a { text-decoration: none; color: inherit; }
+        header {
+            background-color: #ffffff; border-bottom: 3px solid #8a1c14;
+            padding: 20px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .header-container {
+            max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px;
+        }
+        .logo h1 { font-size: 1.6rem; letter-spacing: 0.2rem; color: #8a1c14; }
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin-left: 25px; font-weight: bold; }
+        nav ul li a:hover { color: #8a1c14; border-bottom: 2px solid #8a1c14; }
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            height: 60vh; display: flex; justify-content: center; align-items: center; color: #ffffff; text-align: center; padding: 0 20px;
+        }
+        .hero-content h2 { font-size: 3rem; margin-bottom: 15px; letter-spacing: 0.3rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.6); }
+        .hero-content p { font-size: 1.2rem; letter-spacing: 0.1rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.6); }
+        .container { max-width: 900px; margin: 0 auto; padding: 60px 20px; }
+        section { margin-bottom: 80px; }
+        .section-title { text-align: center; font-size: 2rem; color: #8a1c14; margin-bottom: 40px; position: relative; letter-spacing: 0.15rem; }
+        .section-title::after { content: ''; display: block; width: 50px; height: 2px; background-color: #8a1c14; margin: 15px auto 0; }
+        .about-text { text-align: justify; font-size: 1.05rem; margin-bottom: 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .card { background-color: #ffffff; border: 1px solid #e0e0e0; border-top: 4px solid #8a1c14; padding: 25px; border-radius: 4px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); transition: transform 0.3s ease; }
+        .card:hover { transform: translateY(-5px); }
+        .card h3 { color: #8a1c14; margin-bottom: 15px; font-size: 1.3rem; }
+        .timeline { border-left: 2px solid #8a1c14; padding-left: 30px; margin-left: 20px; }
+        .timeline-item { position: relative; margin-bottom: 40px; }
+        .timeline-item::before { content: ''; position: absolute; left: -37px; top: 8px; width: 12px; height: 12px; border-radius: 50%; background-color: #8a1c14; }
+        .timeline-date { font-weight: bold; color: #8a1c14; font-size: 1.1rem; margin-bottom: 5px; }
+        footer { background-color: #2b2b2b; color: #ffffff; text-align: center; padding: 30px 0; font-size: 0.9rem; letter-spacing: 0.05rem; }
+        @media (max-width: 600px) { .header-container { flex-direction: column; gap: 15px; } .hero-content h2 { font-size: 2rem; } nav ul li { margin: 0 10px; } }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo"><h1>和の心 - 茶道 -</h1></div>
+            <nav>
+                <ul>
+                    <li><a href="#about">茶道とは</a></li>
+                    <li><a href="#elements">三つの心得</a></li>
+                    <li><a href="#history">歴史</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="hero-content">
+            <h2>一期一会の精神を味わう</h2>
+            <p>一杯のお茶に込められた、静寂ともてなしの美学</p>
+        </div>
+    </div>
+
+    <main class="container">
+        <section id="about">
+            <h2 class="section-title">茶道文化について</h2>
+            <p class="about-text">
+                「茶道（さどう・ちゃどう）」は、単にお茶を淹れて飲むだけでなく、お茶を点（た）てる所作、道具の鑑賞、茶室の空間演出など、すべてを通して精神を研ぎ澄ます総合芸術です。
+            </p>
+            <p class="about-text">
+                「一期一会（いちごいちえ）」、つまり「この出会いは一生に一度きりのもの」という心得のもと、主客が一体となってその一瞬を大切にする心が、茶道の根底に流れています。
+            </p>
+        </section>
+
+        <section id="elements">
+            <h2 class="section-title">茶道の重要な精神</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>和敬清寂（わけいせいじゃく）</h3>
+                    <p>お互いを敬い、心と空間を清らかに保ち、どんなときも動じない平穏な心を持つという、茶道の根本となる教えです。</p>
+                </div>
+                <div class="card">
+                    <h3>侘び寂び（わびさび）</h3>
+                    <p>不完全なものや、経年変化したものの中に美しさを見出す感性。豪華絢爛ではなく、質素で静かな空間を尊びます。</p>
+                </div>
+                <div class="card">
+                    <h3>おもてなし</h3>
+                    <p>客人が心地よく過ごせるよう、季節の花を生け、掛軸を選び、細部まで徹底的に心を配る主人のこだわりです。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="history">
+            <h2 class="section-title">茶道の歴史</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">鎌倉時代</div>
+                    <p>栄西禅師が中国（宋）からお茶の種を持ち帰り、禅寺を中心に喫茶の習慣が広がりました。当初は薬としても珍重されていました。</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">室町・安土桃山時代</div>
+                    <p>千利休（せんのりきゅう）によって、無駄を削ぎ落とした「侘び茶」が完成。織田信長や豊臣秀吉などの武将の間で大流行しました。</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">現代</div>
+                    <p>表千家・裏千家・武者小路千家（三千家）をはじめとする流派に受け継がれ、今では日常の礼儀作法や、心を落ち着かせる習い事として親しまれています。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer><p>&copy; 2026 和の心. All Rights Reserved.</p></footer>
+</body>
+</html>
