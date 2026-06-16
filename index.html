@@ -1,11 +1,136 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<title>index ページ</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>和の心 - 日本伝統文化ポータル</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Georgia', 'Times New Roman', 'Noto Serif JP', 'Yu Mincho', '游明朝', serif; background-color: #fcfaf2; color: #2b2b2b; line-height: 1.8; }
+        a { text-decoration: none; color: inherit; }
+        header { background-color: #ffffff; border-bottom: 3px solid #8a1c14; padding: 20px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .header-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
+        .logo h1 { font-size: 1.6rem; letter-spacing: 0.2rem; color: #8a1c14; }
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin-left: 25px; font-weight: bold; }
+        nav ul li a:hover { color: #8a1c14; border-bottom: 2px solid #8a1c14; }
+        
+        /* ヒーローセクション（メインビジュアル） */
+        .hero {
+            /* 指定されたトップ画像URLに変更しました */
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://thumb.photo-ac.com/63/63460dc006f5f14cc5cb47d21de97268_t.jpeg') center/cover no-repeat;
+            height: 70vh; display: flex; justify-content: center; align-items: center; color: #ffffff; text-align: center; padding: 0 20px;
+        }
+        
+        .hero-content h2 { font-size: 3.5rem; margin-bottom: 15px; letter-spacing: 0.4rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.6); }
+        .hero-content p { font-size: 1.3rem; letter-spacing: 0.15rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.6); }
+        .container { max-width: 1100px; margin: 0 auto; padding: 80px 20px; }
+        .section-title { text-align: center; font-size: 2.2rem; color: #8a1c14; margin-bottom: 60px; position: relative; letter-spacing: 0.2rem; }
+        .section-title::after { content: ''; display: block; width: 60px; height: 2px; background-color: #8a1c14; margin: 20px auto 0; }
+        
+        /* 各カルチャーページへのリンクカードグリッド */
+        .culture-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .culture-card { background-color: #ffffff; border: 1px solid #e0e0e0; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.03); transition: transform 0.3s ease, box-shadow 0.3s ease; display: flex; flex-direction: column; }
+        .culture-card:hover { transform: translateY(-8px); box-shadow: 0 12px 20px rgba(138, 28, 20, 0.1); }
+        
+        /* カード内のミニ画像 */
+        .card-img { height: 180px; background-size: cover; background-position: center; }
+        .img-sado { background-image: url('https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=600&q=80'); }
+        .img-kado { background-image: url('https://t4.ftcdn.net/jpg/00/15/85/21/360_F_15852150_p3BnhtEthAewkkY7cylGABOXIXi0Q5t5.jpg'); }
+        .img-shodo { background-image: url('https://cdn.pixabay.com/photo/2022/12/01/08/41/school-7628628_1280.jpg'); }
+        .img-kabuki { background-image: url('https://tse3.mm.bing.net/th/id/OIP.bmu3BueTTeo8JRRal9nylAHaEC?rs=1&pid=ImgDetMain&o=7&rm=3'); }
+        .img-washoku { background-image: url('https://t4.ftcdn.net/jpg/02/88/14/99/360_F_288149988_N3AZQDkFRj4Z97vSgid6u79r0cYawZq9.jpg'); }
+        
+        .card-content { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
+        .card-content h3 { color: #8a1c14; font-size: 1.4rem; margin-bottom: 10px; letter-spacing: 0.1rem; }
+        .card-content p { font-size: 0.95rem; color: #555; margin-bottom: 20px; text-align: justify; line-height: 1.6; }
+        .btn-link { display: inline-block; text-align: center; background-color: #8a1c14; color: #ffffff; padding: 12px 0; border-radius: 4px; font-weight: bold; font-size: 0.9rem; transition: background-color 0.2s; }
+        .btn-link:hover { background-color: #b0251b; }
+        
+        footer { background-color: #2b2b2b; color: #ffffff; text-align: center; padding: 40px 0; font-size: 0.9rem; letter-spacing: 0.05rem; margin-top: 60px; }
+        @media (max-width: 600px) { .header-container { flex-direction: column; gap: 15px; } .hero-content h2 { font-size: 2.2rem; } .hero-content p { font-size: 1rem; } }
+    </style>
 </head>
 <body>
-<h1>トップページ</h1>
-<p>これは index.html のサンプルです。</p>
+    <header>
+        <div class="header-container">
+            <div class="logo"><h1>和の心 - 伝統文化ポータル -</h1></div>
+            <nav>
+                <ul>
+                    <li><a href="#contents">文化を探る</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="hero-content">
+            <h2>日本の美、脈々と受け継がれる心</h2>
+            <p>数百年の時を超えて、現代を彩る５つの様式美</p>
+        </div>
+    </div>
+
+    <main class="container" id="contents">
+        <h2 class="section-title">日本の伝統文化を知る</h2>
+        
+        <div class="culture-grid">
+            <div class="culture-card">
+                <div class="card-img img-sado"></div>
+                <div class="card-content">
+                    <div>
+                        <h3>茶道</h3>
+                        <p>「一期一会」の心でお茶を点て、客をもてなす儀礼芸術。お茶の味だけでなく、器や庭、所作にまでおよぶ総合芸術です。</p>
+                    </div>
+                    <a href="sado.html" class="btn-link">茶道のページへ</a>
+                </div>
+            </div>
+
+            <div class="culture-card">
+                <div class="card-img img-kado"></div>
+                <div class="card-content">
+                    <div>
+                        <h3>華道 - 生け花 -</h3>
+                        <p>四季折々の草木を器に生け、空間全体で自然の縮図を表現する「引き算の美学」。命の尊さを見出す空間の芸術です。</p>
+                    </div>
+                    <a href="kado.html" class="btn-link">華道のページへ</a>
+                </div>
+            </div>
+
+            <div class="culture-card">
+                <div class="card-img img-shodo"></div>
+                <div class="card-content">
+                    <div>
+                        <h3>書道</h3>
+                        <p>一滴の墨、一本の線に精神を込める白と黒の芸術。文字の美しさだけでなく、自身の内面を静かに映し出します。</p>
+                    </div>
+                    <a href="shodo.html" class="btn-link">書道のページへ</a>
+                </div>
+            </div>
+
+            <div class="culture-card">
+                <div class="card-img img-kabuki"></div>
+                <div class="card-content">
+                    <div>
+                        <h3>歌舞伎</h3>
+                        <p>江戸時代に花開いた、世界に誇る総合演劇芸術。大迫力の「隈取」や「見得」など、豪華絢爛な演出が観客を魅了します。</p>
+                    </div>
+                    <a href="kabuki.html" class="btn-link">歌舞伎のページへ</a>
+                </div>
+            </div>
+
+            <div class="culture-card">
+                <div class="card-img img-washoku"></div>
+                <div class="card-content">
+                    <div>
+                        <h3>和食</h3>
+                        <p>ユネスコ無形文化遺産にも登録された食文化。素材本来の味を尊び、年中行事や四季の美しさを食卓に表現します。</p>
+                    </div>
+                    <a href="washoku.html" class="btn-link">和食のページへ</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer><p>&copy; 2026 和の心 ポータル. All Rights Reserved.</p></footer>
 </body>
 </html>
