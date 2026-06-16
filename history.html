@@ -3,29 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>日本の伝統文化 - 茶道</title>
+    <title>日本の伝統文化 - 華道</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Georgia', 'Times New Roman', 'Noto Serif JP', 'Yu Mincho', '游明朝', serif;
-            background-color: #fcfaf2; color: #2b2b2b; line-height: 1.8;
-        }
+        body { font-family: 'Georgia', 'Times New Roman', 'Noto Serif JP', 'Yu Mincho', '游明朝', serif; background-color: #fcfaf2; color: #2b2b2b; line-height: 1.8; }
         a { text-decoration: none; color: inherit; }
-        header {
-            background-color: #ffffff; border-bottom: 3px solid #8a1c14;
-            padding: 20px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-        .header-container {
-            max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px;
-        }
+        header { background-color: #ffffff; border-bottom: 3px solid #8a1c14; padding: 20px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .header-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
         .logo h1 { font-size: 1.6rem; letter-spacing: 0.2rem; color: #8a1c14; }
         nav ul { display: flex; list-style: none; }
         nav ul li { margin-left: 25px; font-weight: bold; }
         nav ul li a:hover { color: #8a1c14; border-bottom: 2px solid #8a1c14; }
+        
+        /* ヒーローセクション：ご指定いただいた生け花の画像URLを設定しました */
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://t4.ftcdn.net/jpg/00/15/85/21/360_F_15852150_p3BnhtEthAewkkY7cylGABOXIXi0Q5t5.jpg') center/cover no-repeat;
             height: 60vh; display: flex; justify-content: center; align-items: center; color: #ffffff; text-align: center; padding: 0 20px;
         }
+        
         .hero-content h2 { font-size: 3rem; margin-bottom: 15px; letter-spacing: 0.3rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.6); }
         .hero-content p { font-size: 1.2rem; letter-spacing: 0.1rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.6); }
         .container { max-width: 900px; margin: 0 auto; padding: 60px 20px; }
@@ -48,11 +43,11 @@
 <body>
     <header>
         <div class="header-container">
-            <div class="logo"><h1>和の心 - 茶道 -</h1></div>
+            <div class="logo"><h1>和の心 - 華道 -</h1></div>
             <nav>
                 <ul>
-                    <li><a href="#about">茶道とは</a></li>
-                    <li><a href="#elements">三つの心得</a></li>
+                    <li><a href="#about">華道とは</a></li>
+                    <li><a href="#styles">表現の要素</a></li>
                     <li><a href="#history">歴史</a></li>
                 </ul>
             </nav>
@@ -61,54 +56,54 @@
 
     <div class="hero">
         <div class="hero-content">
-            <h2>一期一会の精神を味わう</h2>
-            <p>一杯のお茶に込められた、静寂ともてなしの美学</p>
+            <h2>命の輝きを器に生ける</h2>
+            <p>植物の「引き算の美」を見出す、空間の芸術</p>
         </div>
     </div>
 
     <main class="container">
         <section id="about">
-            <h2 class="section-title">茶道文化について</h2>
+            <h2 class="section-title">華道・生け花について</h2>
             <p class="about-text">
-                「茶道（さどう・ちゃどう）」は、単にお茶を淹れて飲むだけでなく、お茶を点（た）てる所作、道具の鑑賞、茶室の空間演出など、すべてを通して精神を研ぎ澄ます総合芸術です。
+                「華道（かどう）」または「生け花（いけばな）」は、四季折々の草木や花を器に生け、その美しさを鑑賞する日本の伝統芸術です。西洋のフラワーアレンジメントが「足し算（空間を埋める）」の美学であるのに対し、華道は「引き算（余白を残す）」の美学とされます。
             </p>
             <p class="about-text">
-                「一期一会（いちごいちえ）」、つまり「この出会いは一生に一度きりのもの」という心得のもと、主客が一体となってその一瞬を大切にする心が、茶道の根底に流れています。
+                ただ綺麗な花を飾るだけでなく、枝の湾曲や葉の裏側、さらには枯れかけた姿にも命の尊さを見出し、空間全体で自然の縮図を表現します。
             </p>
         </section>
 
-        <section id="elements">
-            <h2 class="section-title">茶道の重要な精神</h2>
+        <section id="styles">
+            <h2 class="section-title">華道の魅せる要素</h2>
             <div class="grid">
                 <div class="card">
-                    <h3>和敬清寂（わけいせいじゃく）</h3>
-                    <p>お互いを敬い、心と空間を清らかに保ち、どんなときも動じない平穏な心を持つという、茶道の根本となる教えです。</p>
+                    <h3>余白の美</h3>
+                    <p>花そのものだけでなく、枝と枝の間に生まれる「空間（空気感）」を美として捉え、静寂や奥行きを演出します。</p>
                 </div>
                 <div class="card">
-                    <h3>侘び寂び（わびさび）</h3>
-                    <p>不完全なものや、経年変化したものの中に美しさを見出す感性。豪華絢爛ではなく、質素で静かな空間を尊びます。</p>
+                    <h3>非対称の調和</h3>
+                    <p>左右対称に整えるのではなく、あえてバランスを崩すことで、自然界のリアルな生命力や躍動感を表現します。</p>
                 </div>
                 <div class="card">
-                    <h3>おもてなし</h3>
-                    <p>客人が心地よく過ごせるよう、季節の花を生け、掛軸を選び、細部まで徹底的に心を配る主人のこだわりです。</p>
+                    <h3>役枝（やくえだ）</h3>
+                    <p>一般的に「天・地・人（または主・副・客）」と呼ばれる中心となる枝を決め、宇宙や自然のパワーバランスを器の中に構築します。</p>
                 </div>
             </div>
         </section>
 
         <section id="history">
-            <h2 class="section-title">茶道の歴史</h2>
+            <h2 class="section-title">華道の歴史</h2>
             <div class="timeline">
                 <div class="timeline-item">
-                    <div class="timeline-date">鎌倉時代</div>
-                    <p>栄西禅師が中国（宋）からお茶の種を持ち帰り、禅寺を中心に喫茶の習慣が広がりました。当初は薬としても珍重されていました。</p>
+                    <div class="timeline-date">飛鳥時代・平安時代</div>
+                    <p>仏教の伝来とともに、仏前に花を供える「供華（くげ）」が始まりました。これが華道の最も古いルーツとされています。</p>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-date">室町・安土桃山時代</div>
-                    <p>千利休（せんのりきゅう）によって、無駄を削ぎ落とした「侘び茶」が完成。織田信長や豊臣秀吉などの武将の間で大流行しました。</p>
+                    <div class="timeline-date">室町時代</div>
+                    <p>書院造の建築様式（床の間）の誕生に伴い、京都の六角堂の僧侶「池坊（いけのぼう）」らによって、鑑賞としての生け花が確立されました。</p>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-date">現代</div>
-                    <p>表千家・裏千家・武者小路千家（三千家）をはじめとする流派に受け継がれ、今では日常の礼儀作法や、心を落ち着かせる習い事として親しまれています。</p>
+                    <div class="timeline-date">明治時代〜現代</div>
+                    <p>明治以降は女性の嗜みとして広く普及。池坊、草月流、小原流など多様な流派が生まれ、現代建築に合わせた自由な造形へと進化しています。</p>
                 </div>
             </div>
         </section>
