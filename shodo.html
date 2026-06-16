@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日本の伝統文化 - 書道</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Georgia', 'Times New Roman', 'Noto Serif JP', 'Yu Mincho', '游明朝', serif; background-color: #fcfaf2; color: #2b2b2b; line-height: 1.8; }
+        a { text-decoration: none; color: inherit; }
+        header { background-color: #ffffff; border-bottom: 3px solid #8a1c14; padding: 20px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .header-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
+        .logo h1 { font-size: 1.6rem; letter-spacing: 0.2rem; color: #8a1c14; }
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin-left: 25px; font-weight: bold; }
+        nav ul li a:hover { color: #8a1c14; border-bottom: 2px solid #8a1c14; }
+        
+        /* ヒーローセクション：ご指定いただいた書道の画像URLを設定しました */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://cdn.pixabay.com/photo/2022/12/01/08/41/school-7628628_1280.jpg') center/cover no-repeat;
+            height: 60vh; display: flex; justify-content: center; align-items: center; color: #ffffff; text-align: center; padding: 0 20px;
+        }
+        
+        .hero-content h2 { font-size: 3rem; margin-bottom: 15px; letter-spacing: 0.3rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.6); }
+        .hero-content p { font-size: 1.2rem; letter-spacing: 0.1rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.6); }
+        .container { max-width: 900px; margin: 0 auto; padding: 60px 20px; }
+        section { margin-bottom: 80px; }
+        .section-title { text-align: center; font-size: 2rem; color: #8a1c14; margin-bottom: 40px; position: relative; letter-spacing: 0.15rem; }
+        .section-title::after { content: ''; display: block; width: 50px; height: 2px; background-color: #8a1c14; margin: 15px auto 0; }
+        .about-text { text-align: justify; font-size: 1.05rem; margin-bottom: 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .card { background-color: #ffffff; border: 1px solid #e0e0e0; border-top: 4px solid #8a1c14; padding: 25px; border-radius: 4px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); transition: transform 0.3s ease; }
+        .card:hover { transform: translateY(-5px); }
+        .card h3 { color: #8a1c14; margin-bottom: 15px; font-size: 1.3rem; }
+        .timeline { border-left: 2px solid #8a1c14; padding-left: 30px; margin-left: 20px; }
+        .timeline-item { position: relative; margin-bottom: 40px; }
+        .timeline-item::before { content: ''; position: absolute; left: -37px; top: 8px; width: 12px; height: 12px; border-radius: 50%; background-color: #8a1c14; }
+        .timeline-date { font-weight: bold; color: #8a1c14; font-size: 1.1rem; margin-bottom: 5px; }
+        footer { background-color: #2b2b2b; color: #ffffff; text-align: center; padding: 30px 0; font-size: 0.9rem; letter-spacing: 0.05rem; }
+        @media (max-width: 600px) { .header-container { flex-direction: column; gap: 15px; } .hero-content h2 { font-size: 2rem; } nav ul li { margin: 0 10px; } }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo"><h1>和の心 - 書道 -</h1></div>
+            <nav>
+                <ul>
+                    <li><a href="#about">書道とは</a></li>
+                    <li><a href="#styles">基本の書体</a></li>
+                    <li><a href="#history">歴史</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="hero-content">
+            <h2>白と黒が織りなす精神世界</h2>
+            <p>一滴の墨、一本の線に魂を込める</p>
+        </div>
+    </div>
+
+    <main class="container">
+        <section id="about">
+            <h2 class="section-title">書道文化について</h2>
+            <p class="about-text">
+                「書道（しょどう）」は、毛筆と墨を用いて文字の美しさを表現する芸術であり、自己の精神を高める修行としての側面も持ちます。文字の正確さだけでなく、線の太さ、勢い、墨の滲みや掠れ、全体の配置（余白）が評価の対象となります。
+            </p>
+            <p class="about-text">
+                書道に用いる「筆・墨・硯・紙」は『文房四宝（ぶんぼうしほう）』と呼ばれ、古くから大切に扱われてきました。一度きりの筆遣いで修正が効かないスリリングさの中に、書き手の個性が強く映し出されます。
+            </p>
+        </section>
+
+        <section id="styles">
+            <h2 class="section-title">代表的な三つの書体</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>楷書（かいしょ）</h3>
+                    <p>一点一画を正確に、崩さずに書く最も基本的な書体。現在の活字のベースにもなっており、端正な美しさが特徴です。</p>
+                </div>
+                <div class="card">
+                    <h3>行書（ぎょうしょ）</h3>
+                    <p>楷書を少し崩し、流れるように文字を繋げて書く書体。日常的にも使いやすく、リズム感と実用性を兼ね備えています。</p>
+                </div>
+                <div class="card">
+                    <h3>草書（そうしょ）</h3>
+                    <p>行書をさらに大胆に省略し、曲線的に速く書く書体。文字の原型が見えなくなるほど抽象化され、高い芸術性を放ちます。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="history">
+            <h2 class="section-title">書道の歴史</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">飛鳥・奈良時代</div>
+                    <p>中国から仏教とともに「写経（しゃきょう）」の習慣が伝来し、役人や僧侶の間で美しい文字を書く重要性が高まりました。</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">平安時代</div>
+                    <p>空海などの名手（三筆）が活躍。さらに、日本独自の文字である「かな（仮名）」が誕生し、優美で流麗な「国風文化の書」が確立されました。</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">現代</div>
+                    <p>寺子屋から続く「習字」の文化として教育に根付く一方、音楽に合わせた「書道パフォーマンス」など、魅せるアートとしても進化しています。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer><p>&copy; 2026 和の心. All Rights Reserved.</p></footer>
+</body>
+</html>
