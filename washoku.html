@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日本の伝統文化 - 和食</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Georgia', 'Times New Roman', 'Noto Serif JP', 'Yu Mincho', '游明朝', serif; background-color: #fcfaf2; color: #2b2b2b; line-height: 1.8; }
+        a { text-decoration: none; color: inherit; }
+        header { background-color: #ffffff; border-bottom: 3px solid #8a1c14; padding: 20px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .header-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
+        .logo h1 { font-size: 1.6rem; letter-spacing: 0.2rem; color: #8a1c14; }
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin-left: 25px; font-weight: bold; }
+        nav ul li a:hover { color: #8a1c14; border-bottom: 2px solid #8a1c14; }
+        
+        /* ヒーローセクション：ご指定いただいた和食の画像URLを設定しました */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://t4.ftcdn.net/jpg/02/88/14/99/360_F_288149988_N3AZQDkFRj4Z97vSgid6u79r0cYawZq9.jpg') center/cover no-repeat;
+            height: 60vh; display: flex; justify-content: center; align-items: center; color: #ffffff; text-align: center; padding: 0 20px;
+        }
+        
+        .hero-content h2 { font-size: 3rem; margin-bottom: 15px; letter-spacing: 0.3rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.6); }
+        .hero-content p { font-size: 1.2rem; letter-spacing: 0.1rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.6); }
+        .container { max-width: 900px; margin: 0 auto; padding: 60px 20px; }
+        section { margin-bottom: 80px; }
+        .section-title { text-align: center; font-size: 2rem; color: #8a1c14; margin-bottom: 40px; position: relative; letter-spacing: 0.15rem; }
+        .section-title::after { content: ''; display: block; width: 50px; height: 2px; background-color: #8a1c14; margin: 15px auto 0; }
+        .about-text { text-align: justify; font-size: 1.05rem; margin-bottom: 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .card { background-color: #ffffff; border: 1px solid #e0e0e0; border-top: 4px solid #8a1c14; padding: 25px; border-radius: 4px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); transition: transform 0.3s ease; }
+        .card:hover { transform: translateY(-5px); }
+        .card h3 { color: #8a1c14; margin-bottom: 15px; font-size: 1.3rem; }
+        .timeline { border-left: 2px solid #8a1c14; padding-left: 30px; margin-left: 20px; }
+        .timeline-item { position: relative; margin-bottom: 40px; }
+        .timeline-item::before { content: ''; position: absolute; left: -37px; top: 8px; width: 12px; height: 12px; border-radius: 50%; background-color: #8a1c14; }
+        .timeline-date { font-weight: bold; color: #8a1c14; font-size: 1.1rem; margin-bottom: 5px; }
+        footer { background-color: #2b2b2b; color: #ffffff; text-align: center; padding: 30px 0; font-size: 0.9rem; letter-spacing: 0.05rem; }
+        @media (max-width: 600px) { .header-container { flex-direction: column; gap: 15px; } .hero-content h2 { font-size: 2rem; } nav ul li { margin: 0 10px; } }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo"><h1>和の心 - 和食 -</h1></div>
+            <nav>
+                <ul>
+                    <li><a href="#about">和食とは</a></li>
+                    <li><a href="#features">４つの特徴</a></li>
+                    <li><a href="#history">歴史</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="hero-content">
+            <h2>自然の恵みを、そのままいただく</h2>
+            <p>ユネスコ無形文化遺産に登録された、日本の伝統的な食文化</p>
+        </div>
+    </div>
+
+    <main class="container">
+        <section id="about">
+            <h2 class="section-title">和食文化について</h2>
+            <p class="about-text">
+                「和食（わしょく）」は、日本の自然や風土の中で独自の進化を遂げてきた食文化です。単に「日本料理」というジャンルを指すだけでなく、「自然を尊ぶ」という日本人の気質に基づいた、素材への感謝や年中行事との結びつきを含めた「社会的慣習」として、2013年にユネスコ無形文化遺産に登録されました。
+            </p>
+            <p class="about-text">
+                一汁三菜（いちじゅうさんさい）を基本スタイルとし、栄養バランスに優れ、日本人の健康と長寿を支える基盤となっています。
+            </p>
+        </section>
+
+        <section id="features">
+            <h2 class="section-title">和食が持つ４つの特徴</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>素材本来の味の尊重</h3>
+                    <p>新鮮な食材が手に入りやすい日本の環境を活かし、過度な味付けをせず、出汁（だし）の旨味を引き出して調理します。</p>
+                </div>
+                <div class="card">
+                    <h3>健康的な栄養バランス</h3>
+                    <p>一汁三菜を基本に、動物性油脂の摂取が少なく、理想的な栄養バランスを保ちやすいため肥満防止に役立ちます。</p>
+                </div>
+                <div class="card">
+                    <h3>自然の美しさの表現</h3>
+                    <p>四季折々の花や葉を料理に添えたり、季節に合った器（陶器や漆器）を使うことで、食卓の上に季節の移ろいを表現します。</p>
+                </div>
+                <div class="card">
+                    <h3>年中行事との密接な関わり</h3>
+                    <p>お正月のおせち料理や、お彼岸のおはぎなど、自然の恵みに感謝し、家族や地域の絆を深める道具として食が使われます。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="history">
+            <h2 class="section-title">和食の歩み</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">平安時代〜室町時代</div>
+                    <p>貴族をもてなす「大饗料理」や、仏教の影響から肉類を使わない「精進料理」が誕生。室町時代には武家の礼法を重んじた「本膳料理」が確立されます。</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">安土桃山時代〜江戸時代</div>
+                    <p>千利休らによって茶の湯から生まれた「懐石料理」が登場。江戸時代に入ると、醤油や出汁の文化が広く一般に普及し、寿司や天ぷら、蕎麦といった現代の和食の原型が庶民の間で花開きます。</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">明治以降〜現代</div>
+                    <p>西洋の食文化が入ることで肉食が解禁され、すき焼きや肉じゃがなど、洋食を和風にアレンジした独自の家庭料理へと発展。世界中で「Healthy Food」として注目されるようになります。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer><p>&copy; 2026 和の心. All Rights Reserved.</p></footer>
+</body>
+</html>
