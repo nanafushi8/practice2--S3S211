@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日本の伝統文化 - 歌舞伎</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Georgia', 'Times New Roman', 'Noto Serif JP', 'Yu Mincho', '游明朝', serif; background-color: #fcfaf2; color: #2b2b2b; line-height: 1.8; }
+        a { text-decoration: none; color: inherit; }
+        header { background-color: #ffffff; border-bottom: 3px solid #8a1c14; padding: 20px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .header-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
+        .logo h1 { font-size: 1.6rem; letter-spacing: 0.2rem; color: #8a1c14; }
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin-left: 25px; font-weight: bold; }
+        nav ul li a:hover { color: #8a1c14; border-bottom: 2px solid #8a1c14; }
+        
+        /* ヒーローセクション：ご指定いただいた歌舞伎の画像URLを設定しました */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://tse3.mm.bing.net/th/id/OIP.bmu3BueTTeo8JRRal9nylAHaEC?rs=1&pid=ImgDetMain&o=7&rm=3') center/cover no-repeat;
+            height: 60vh; display: flex; justify-content: center; align-items: center; color: #ffffff; text-align: center; padding: 0 20px;
+        }
+        
+        .hero-content h2 { font-size: 3rem; margin-bottom: 15px; letter-spacing: 0.3rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.6); }
+        .hero-content p { font-size: 1.2rem; letter-spacing: 0.1rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.6); }
+        .container { max-width: 900px; margin: 0 auto; padding: 60px 20px; }
+        section { margin-bottom: 80px; }
+        .section-title { text-align: center; font-size: 2rem; color: #8a1c14; margin-bottom: 40px; position: relative; letter-spacing: 0.15rem; }
+        .section-title::after { content: ''; display: block; width: 50px; height: 2px; background-color: #8a1c14; margin: 15px auto 0; }
+        .about-text { text-align: justify; font-size: 1.05rem; margin-bottom: 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .card { background-color: #ffffff; border: 1px solid #e0e0e0; border-top: 4px solid #8a1c14; padding: 25px; border-radius: 4px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); transition: transform 0.3s ease; }
+        .card:hover { transform: translateY(-5px); }
+        .card h3 { color: #8a1c14; margin-bottom: 15px; font-size: 1.3rem; }
+        .timeline { border-left: 2px solid #8a1c14; padding-left: 30px; margin-left: 20px; }
+        .timeline-item { position: relative; margin-bottom: 40px; }
+        .timeline-item::before { content: ''; position: absolute; left: -37px; top: 8px; width: 12px; height: 12px; border-radius: 50%; background-color: #8a1c14; }
+        .timeline-date { font-weight: bold; color: #8a1c14; font-size: 1.1rem; margin-bottom: 5px; }
+        footer { background-color: #2b2b2b; color: #ffffff; text-align: center; padding: 30px 0; font-size: 0.9rem; letter-spacing: 0.05rem; }
+        @media (max-width: 600px) { .header-container { flex-direction: column; gap: 15px; } .hero-content h2 { font-size: 2rem; } nav ul li { margin: 0 10px; } }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo"><h1>和の心 - 歌舞伎 -</h1></div>
+            <nav>
+                <ul>
+                    <li><a href="#about">歌舞伎とは</a></li>
+                    <li><a href="#elements">独自の演出</a></li>
+                    <li><a href="#history">歴史</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="hero-content">
+            <h2>傾き、魅せる、江戸の華</h2>
+            <p>400年の歴史が紡ぐ、日本最高峰 death 劇の極致</p>
+        </div>
+    </div>
+
+    <main class="container">
+        <section id="about">
+            <h2 class="section-title">歌舞伎文化について</h2>
+            <p class="about-text">
+                「歌舞伎（かぶき）」は、江戸時代に誕生し、現代まで400年以上にわたって受け継がれてきた日本の代表的な演劇芸術です。「歌（音楽）」「舞（踊り）」「伎（役者の技）」が一体となった総合芸術であり、ユネスコ無形文化遺産にも登録されています。
+            </p>
+            <p class="about-text">
+                出雲の阿国（おくに）という女性が始めた斬新な踊りがルーツですが、様々な歴史の変遷を経て、現在は男性のみが全ての役（女性役である「女方（おんながた）」を含む）を演じる独特のスタイルが確立されています。
+            </p>
+        </section>
+
+        <section id="elements">
+            <h2 class="section-title">歌舞伎を彩る独自の演出</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>隈取（くまどり）</h3>
+                    <p>顔の血管や筋肉を強調した独特の化粧法。赤は正義の味方、青は冷酷な悪人など、一目で役柄の性格が分かるようになっています。</p>
+                </div>
+                <div class="card">
+                    <h3>花道（はなみち）</h3>
+                    <p>客席を縦断するように設置された舞台の延長。役者の見せ場となる出入りに使用され、観客との一体感を生み出す重要な設備です。</p>
+                </div>
+                <div class="card">
+                    <h3>見得（みえ）</h3>
+                    <p>物語の感情が最高潮に達した時、役者がポーズを決めて静止する演出。現代でいう「ストップモーション」や「カメラのズームアップ」の効果を持ちます。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="history">
+            <h2 class="section-title">歌舞伎の歴史</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">江戸時代初期（1603年頃）</div>
+                    <p>京都にて出雲の阿国が「かぶき踊り」を披露し、爆発的なブームを巻き起こします。これが歌舞伎の始まりです。</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">江戸時代中期〜後期</div>
+                    <p>幕府の規制により男性のみの演劇へと変化。市川團十郎による豪快な「荒事（あらごと）」や、近松門左衛門による名作が誕生し、庶民最高の娯楽として全盛期を迎えます。</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">明治時代〜現代</div>
+                    <p>演劇改良運動を経て、格調高い国劇としての地位を確立。海外公演も盛んに行われ、近年ではアニメやポップカルチャーと融合した「新作歌舞伎」など、常に進化を続けています。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer><p>&copy; 2026 和の心. All Rights Reserved.</p></footer>
+</body>
+</html>
