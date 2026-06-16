@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日本の伝統文化 - 華道</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Georgia', 'Times New Roman', 'Noto Serif JP', 'Yu Mincho', '游明朝', serif; background-color: #fcfaf2; color: #2b2b2b; line-height: 1.8; }
+        a { text-decoration: none; color: inherit; }
+        header { background-color: #ffffff; border-bottom: 3px solid #8a1c14; padding: 20px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .header-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
+        .logo h1 { font-size: 1.6rem; letter-spacing: 0.2rem; color: #8a1c14; }
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin-left: 25px; font-weight: bold; }
+        nav ul li a:hover { color: #8a1c14; border-bottom: 2px solid #8a1c14; }
+        
+        /* ヒーローセクション：ご指定いただいた生け花の画像URLを設定しました */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://t4.ftcdn.net/jpg/00/15/85/21/360_F_15852150_p3BnhtEthAewkkY7cylGABOXIXi0Q5t5.jpg') center/cover no-repeat;
+            height: 60vh; display: flex; justify-content: center; align-items: center; color: #ffffff; text-align: center; padding: 0 20px;
+        }
+        
+        .hero-content h2 { font-size: 3rem; margin-bottom: 15px; letter-spacing: 0.3rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.6); }
+        .hero-content p { font-size: 1.2rem; letter-spacing: 0.1rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.6); }
+        .container { max-width: 900px; margin: 0 auto; padding: 60px 20px; }
+        section { margin-bottom: 80px; }
+        .section-title { text-align: center; font-size: 2rem; color: #8a1c14; margin-bottom: 40px; position: relative; letter-spacing: 0.15rem; }
+        .section-title::after { content: ''; display: block; width: 50px; height: 2px; background-color: #8a1c14; margin: 15px auto 0; }
+        .about-text { text-align: justify; font-size: 1.05rem; margin-bottom: 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .card { background-color: #ffffff; border: 1px solid #e0e0e0; border-top: 4px solid #8a1c14; padding: 25px; border-radius: 4px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); transition: transform 0.3s ease; }
+        .card:hover { transform: translateY(-5px); }
+        .card h3 { color: #8a1c14; margin-bottom: 15px; font-size: 1.3rem; }
+        .timeline { border-left: 2px solid #8a1c14; padding-left: 30px; margin-left: 20px; }
+        .timeline-item { position: relative; margin-bottom: 40px; }
+        .timeline-item::before { content: ''; position: absolute; left: -37px; top: 8px; width: 12px; height: 12px; border-radius: 50%; background-color: #8a1c14; }
+        .timeline-date { font-weight: bold; color: #8a1c14; font-size: 1.1rem; margin-bottom: 5px; }
+        footer { background-color: #2b2b2b; color: #ffffff; text-align: center; padding: 30px 0; font-size: 0.9rem; letter-spacing: 0.05rem; }
+        @media (max-width: 600px) { .header-container { flex-direction: column; gap: 15px; } .hero-content h2 { font-size: 2rem; } nav ul li { margin: 0 10px; } }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo"><h1>和の心 - 華道 -</h1></div>
+            <nav>
+                <ul>
+                    <li><a href="#about">華道とは</a></li>
+                    <li><a href="#styles">表現の要素</a></li>
+                    <li><a href="#history">歴史</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="hero-content">
+            <h2>命の輝きを器に生ける</h2>
+            <p>植物の「引き算の美」を見出す、空間の芸術</p>
+        </div>
+    </div>
+
+    <main class="container">
+        <section id="about">
+            <h2 class="section-title">華道・生け花について</h2>
+            <p class="about-text">
+                「華道（かどう）」または「生け花（いけばな）」は、四季折々の草木や花を器に生け、その美しさを鑑賞する日本の伝統芸術です。西洋のフラワーアレンジメントが「足し算（空間を埋める）」の美学であるのに対し、華道は「引き算（余白を残す）」の美学とされます。
+            </p>
+            <p class="about-text">
+                ただ綺麗な花を飾るだけでなく、枝の湾曲や葉の裏側、さらには枯れかけた姿にも命の尊さを見出し、空間全体で自然の縮図を表現します。
+            </p>
+        </section>
+
+        <section id="styles">
+            <h2 class="section-title">華道の魅せる要素</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>余白の美</h3>
+                    <p>花そのものだけでなく、枝と枝の間に生まれる「空間（空気感）」を美として捉え、静寂や奥行きを演出します。</p>
+                </div>
+                <div class="card">
+                    <h3>非対称の調和</h3>
+                    <p>左右対称に整えるのではなく、あえてバランスを崩すことで、自然界のリアルな生命力や躍動感を表現します。</p>
+                </div>
+                <div class="card">
+                    <h3>役枝（やくえだ）</h3>
+                    <p>一般的に「天・地・人（または主・副・客）」と呼ばれる中心となる枝を決め、宇宙や自然のパワーバランスを器の中に構築します。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="history">
+            <h2 class="section-title">華道の歴史</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">飛鳥時代・平安時代</div>
+                    <p>仏教の伝来とともに、仏前に花を供える「供華（くげ）」が始まりました。これが華道の最も古いルーツとされています。</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">室町時代</div>
+                    <p>書院造の建築様式（床の間）の誕生に伴い、京都の六角堂の僧侶「池坊（いけのぼう）」らによって、鑑賞としての生け花が確立されました。</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">明治時代〜現代</div>
+                    <p>明治以降は女性の嗜みとして広く普及。池坊、草月流、小原流など多様な流派が生まれ、現代建築に合わせた自由な造形へと進化しています。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer><p>&copy; 2026 和の心. All Rights Reserved.</p></footer>
+</body>
+</html>
